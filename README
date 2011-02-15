@@ -1,0 +1,11 @@
+This is a simple project, to make shell scripts to simplify the installation
+of MDID3 on a Lucid Lynx VM for the purpose of doing development, testing MDID3, 
+etc. 
+
+I guess you could also use it to set up a production server, but that's 
+your decision. 
+
+This should be very exciting for you, because I am neither a qualified ubuntu
+sysadmin, nor do I have any experience writing installer programs. 
+
+So, enjoy!  :-)
