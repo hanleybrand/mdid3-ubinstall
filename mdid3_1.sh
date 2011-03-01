@@ -3,9 +3,10 @@
 
 echo '====Step 1 begins ====' 
 
-sudo apt-get install git-core
+# removed because git-core is required to get this script
+#sudo apt-get install git-core
 
-# necessary to check  if already exists?
+# necessary to check  if already exists? (doesn't seem to be)
 
 sudo adduser mdid
 
