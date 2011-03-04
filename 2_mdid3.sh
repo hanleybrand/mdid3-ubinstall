@@ -29,18 +29,18 @@ sudo easy_install python-dateutil 2> errors/pyodbc-errors.txt
 sudo easy_install flickrapi 2> errors/pyodbc-errors.txt
 sudo easy_install werkzeug 2> errors/pyodbc-errors.txt
 sudo easy_install reportlab 2> errors/pyodbc-errors.txt
-
+#data base section
 echo '==== Readying database user - enter mysql root pass when asked ====' 
 
-mysql -h 3_mdid3.sql -u 'root' -p  2> errors/mysql-errors.txt
+mysql  -u 'root' -p < 3_mdid3.sql 2> errors/mysql-errors.txt
 
 echo '====installing MDID 3 ====' 
-
+# git some mdid3
 cd /var/local/mdid
-git init
-git remote add rooibos git://github.com/cit-jmu/rooibos.git
-git fetch rooibos
-git merge rooibos/master
+sudo git init
+sudo git remote add rooibos git://github.com/cit-jmu/rooibos.git
+sudo git fetch rooibos
+sudo git merge rooibos/master
 
 sudo chown -R mdid:staff /var/local/mdid/*
 
@@ -48,12 +48,16 @@ echo '====preparing virtual machine===='
 
 #copy the apache.conf file to the right place
 
+sudo cp ~/mdid3-ubinstall/mdid3vm.conf /etc/apache2/sites-available/mdid3vm
+
 # copy settings_local.template.py settings_local.py
 
-cp /var/local/mdid/rooibos/settings_local.template.py /var/local/mdid/rooibos/settings_local.py
+sudo cp /var/local/mdid/rooibos/settings_local.template.py /var/local/mdid/rooibos/settings_local.py
 
 # 
 cd cd /var/local/mdid/rooibos
-python manage.py syncdb --noinput
-python manage.py createcachetable cache
+sudo python manage.py syncdb --noinput
+sudo python manage.py createcachetable cache
 #
+
+
