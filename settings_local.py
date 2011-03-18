@@ -31,7 +31,7 @@ DATABASE_OPTIONS = {
 
 # Settings for all database systems
 DATABASE_NAME = 'rooibos'             # Or path to database file if using sqlite3.
-DATABASE_USER = 'mdid'             # Not used with sqlite3.
+DATABASE_USER = 'rooibos'             # Not used with sqlite3.
 DATABASE_PASSWORD = 'rooibos'         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
@@ -56,8 +56,8 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 SOLR_URL = 'http://127.0.0.1:8983/solr/'
 
-SCRATCH_DIR = 'c:/mdid-scratch/'
-AUTO_STORAGE_DIR = 'c:/mdid-collections/'
+SCRATCH_DIR = '/var/local/mdid/mdid-scratch/'
+AUTO_STORAGE_DIR = '/var/local/mdid/mdid-collections/'
 
 # Legacy setting for ImageViewer 2 support
 SECURE_LOGIN = False
@@ -84,7 +84,8 @@ FLICKR_SECRET = ''
 ARTSTOR_GATEWAY = None
 #ARTSTOR_GATEWAY = 'http://sru.artstor.org/SRU/artstor.htm'
 
-OPEN_OFFICE_PATH = 'C:/Program Files/OpenOffice.org 3/program/'
+#add the path to open office if you install the gui
+OPEN_OFFICE_PATH = ''
     
 GEARMAN_SERVERS = ['127.0.0.1']
  
