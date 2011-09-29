@@ -42,4 +42,4 @@ sudo easy_install reportlab 2> errors/pyodbc-errors.txt
 
 echo '============== apt-get & easy_install complete =============='
 echo '================ please check for errors and ================'
-echo '=============== execute 3_mdid.sh  when ready ===============
+echo '=============== execute 3_mdid.sh  when ready ==============='
